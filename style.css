@@ -1,0 +1,168 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fa; /* Slightly lighter background */
+    font-family: 'Arial', sans-serif;
+}
+
+.To-Do-List {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow for more depth */
+    padding: 30px;
+    width: 400px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.To-Do-List:hover {
+    transform: scale(1.03); /* Slight zoom effect when hovering over the container */
+}
+
+/* Header Styles */
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field Styles */
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* Highlighted border color */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 18px;
+    background-color: #007bff; /* Modern blue color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Button lifts slightly */
+}
+
+button:active {
+    transform: translateY(2px); /* Button presses down on click */
+}
+
+/* Button Styles for Delete and Done */
+button.delete {
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+button.delete:hover {
+    background-color: #c0392b;
+}
+
+button.done {
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+button.done:hover {
+    background-color: #2ecc71;
+}
+
+/* Task List Styles */
+#list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+#list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #fafafa; /* Light background for each task */
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+#list li:hover {
+    background-color: #f1f1f1; /* Slight hover effect on tasks */
+}
+
+#list li.done {
+    text-decoration: line-through;
+    color: #7f8c8d; /* Gray color for completed tasks */
+}
+
+#list li button {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .To-Do-List {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    #list li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
